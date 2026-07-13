@@ -4,89 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mind Map</title>
-
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        font-family: sans-serif;
-        position: relative;
-
-        /* ✅ 背景圖片 */
-        /* background: url("./tree.png") no-repeat center center; */
-        background: #0f172a;
-        background-size: cover;
-        padding: 2em;
-      }
-
-      /* 節點 */
-      .node {
-        /*position: absolute;*/
-
-        padding: 10px 16px;
-        background: #353663;
-        color: white;
-        border-radius: 12px;
-        text-align: left;
-        transition: 0.2s;
-      }
-
-      /*葉子*/
-      ul {
-        display: flex;
-        list-style: none;
-        gap: 1em;
-        padding: 0;
-      }
-
-      .leaf {
-        /*position: absolute;*/
-        padding: 10px 16px;
-        background: #6366f1;
-        color: white;
-        border-radius: 12px;
-        cursor: pointer;
-        text-align: center;
-        transition: 0.2s;
-      }
-
-      .leaf:hover {
-        transform: scale(1.1);
-        background: #818cf8;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <div class="node">開發工具（IDE、編輯器）</div>
+    <div id="mind-map"></div>
 
-    <ul>
-      <li>
-        <div
-          class="leaf"
-          data-url="https://www.notion.so/Visual-Studio-Code-20069c4f96478078bcacc6d21baf9121?source=copy_link"
-        >
-          Visual Studio Code
-        </div>
-      </li>
-      <li>
-        <div class="leaf" data-url="">Microsoft Visual Studio</div>
-      </li>
-      <li>
-        <div class="leaf" data-url="">Sublime Text</div>
-      </li>
-    </ul>
-
-    <script>
-      // 點擊節點 → 開連結
-      document.querySelectorAll(".leaf").forEach((leaf) => {
-        leaf.addEventListener("click", () => {
-          const url = leaf.dataset.url;
-          if (url) {
-            window.open(url, "_blank");
-          }
-        });
-      });
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

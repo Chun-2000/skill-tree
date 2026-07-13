@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: sans-serif;
+  position: relative;
+
+  /* ✅ 背景圖片 */
+  /* background: url("./tree.png") no-repeat center center; */
+  background: #0f172a;
+  background-size: cover;
+  padding: 2em;
+}
+
+/* 節點 */
+.node {
+  /*position: absolute;*/
+
+  padding: 10px 16px;
+  background: #353663;
+  color: white;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+/*葉子*/
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  padding: 0;
+}
+
+.leaf {
+  /*position: absolute;*/
+  padding: 10px 16px;
+  background: #6366f1;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.leaf:hover {
+  transform: scale(1.1);
+  background: #818cf8;
+}
